@@ -2,6 +2,6 @@
 - hosts: local
   connection: local
   tasks:
-  - name: "install vim"
-    shell: echo "trying to install vim"
-  - include: vim.yml
+  - name: "install vim & zip"
+    shell: echo "trying to install vim & zip"
+  - include: vim_and_zip.yml
