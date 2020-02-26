@@ -3,8 +3,8 @@
   connection: local
   tasks:
   - name: "run test"
-  - shell: "ls -lrt"
-    register: "output"
+  - shell: echo "running simple test on servers"
+  - include: test.yml
   - debug: var=output.stdout_lines
   - name: "install vim & zip"
     shell: echo "trying to install vim & zip"
