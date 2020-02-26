@@ -1,6 +1,7 @@
 ---
 - hosts: local
+  connection: local
   tasks:
-    - name: install vim
-      shell: echo "trying to install vim"
-    - include: ansible-vim/vim.yml
+  - name: install vim
+    shell: echo "trying to install vim"
+  - include: ansible-vim/vim.yml
