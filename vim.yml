@@ -1,15 +1,15 @@
 ---
-- name: "vim"
-  apt: name={{ item }} cache_valid_time=3600 state=installed update_cache=yes
-  sudo: yes
-  with_items:
-    - vim
-    - git-core
-    - python
-    - python-simplejson # For text-helper.vim
-- name: "vimrc"
-  copy: src=~/.vimrc dest=~/.vimrc
-- name: vundle
-  git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
-- name: vundle plugins
-  shell: vim +PluginInstall +qall
+  - name: "vim"
+    apt: name={{ item }} cache_valid_time=3600 state=installed update_cache=yes
+    sudo: yes
+    with_items:
+      - vim
+      - git-core
+      - python
+      - python-simplejson # For text-helper.vim
+  - name: "vimrc"
+    copy: src=~/.vimrc dest=~/.vimrc
+  - name: vundle
+    git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+  - name: vundle plugins
+    shell: vim +PluginInstall +qall
