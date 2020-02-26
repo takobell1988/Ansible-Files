@@ -2,10 +2,6 @@
 - hosts: local
   connection: local
   tasks:
-  - name: "Run test"
-  - shell: echo "running simple test on servers"
-  - include: test.yml
-  - debug: var=output.stdout_lines
   - name: "install vim & zip"
     shell: echo "trying to install vim & zip"
   - include: vim.yml
