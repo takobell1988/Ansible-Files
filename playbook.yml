@@ -4,4 +4,4 @@
   tasks:
   - name: install vim
     shell: echo "trying to install vim"
-  - include: ansible-vim/vim.yml
+  - include: vim.yml
